@@ -16,6 +16,10 @@ function getCompChoice() {
 function playerChoice() {
     let input = prompt("Make a move. Type 'rock', 'paper', or 'scissors'.");
     input = input.toLowerCase();
+    while (choices.includes(input) === false){
+        input = prompt("You must make a valid move. Type 'rock', 'paper', or 'scissors'.");
+    }
+    input = input.toLowerCase();
     return input 
 }
 
@@ -25,18 +29,18 @@ function rpsRound(humanHand, compHand) {
     if (humanHand === compHand) {
         rounds += 1
         tie += 1
-        return (tieMessage);
+        return (console.log(tieMessage));
     } else if ((humanHand==='rock' && compHand==='scissors') || 
                 (humanHand==='paper' && compHand==='rock') || 
                 (humanHand==='scissors' && compHand==='paper')) {
                     rounds += 1
                     playerWin += 1
-                    return (winMessage);
+                    return (console.log(winMessage));
                 }
         else {
             rounds += 1
             compWin += 1
-            return (loseMessage)}
+            return (console.log(loseMessage))}
     
 }
 
