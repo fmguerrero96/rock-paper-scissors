@@ -11,5 +11,23 @@ function playerChoice() {
     return input 
 }
 
+function rpsRound(humanHand, compHand) {
+    const tieMessage = ("It's a tie.")
+    const winMessage = ('You WIn!!!')
+    const loseMessage = ('You Lose.')
+    console.log('Human Player: ', humanHand);
+    console.log('Computer Player: ', compHand);
+    if (humanHand === compHand) {
+        return (tieMessage);
+    } else if ((humanHand==='rock' && compHand==='scissors') || 
+                (humanHand==='paper' && compHand==='rock') || 
+                (humanHand==='scissors' && compHand==='paper')) {
+                    return (winMessage);
+                }
+        else {return (loseMessage)}
+}
+
+
+
 
 
