@@ -1,12 +1,10 @@
-const choices = ['rock', 'paper', 'scissors'];
-const tieMessage = ("It's a tie.")
-const winMessage = ('You WIn!!!')
-const loseMessage = ('You Lose.')
+const choices = ['Rock', 'Paper', 'Scissors'];
+const tieMessage = ("It's a tie.");
+const winMessage = ('You WIn!!!');
+const loseMessage = ('You Lose.');
 
-let rounds = 0
 let playerWin = 0;
 let compWin = 0;
-let tie = 0;
 
 function getCompChoice() {
     let selection = choices[Math.floor(Math.random()*choices.length)];
