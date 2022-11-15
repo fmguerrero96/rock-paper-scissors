@@ -13,15 +13,6 @@ function getCompChoice() {
     return selection
 }
 
-function playerChoice() {
-    let input = prompt("Make a move. Type 'rock', 'paper', or 'scissors'.");
-    input = input.toLowerCase();
-    while (choices.includes(input) === false){
-        input = prompt("You must make a valid move. Type 'rock', 'paper', or 'scissors'.");
-    }
-    input = input.toLowerCase();
-    return input 
-}
 
 function rpsRound(humanHand, compHand) {
     console.log('Human Player: ', humanHand);
@@ -44,13 +35,3 @@ function rpsRound(humanHand, compHand) {
     
 }
 
-function game(){
-    while (rounds < 5){
-        rpsRound(playerChoice(), getCompChoice());
-    }
-    console.log('Player Score:', playerWin)
-    console.log('Computer Score:', compWin)
-    console.log('Ties:', tie)
-}
-
-game()
