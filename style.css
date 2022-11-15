@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(39, 75, 98);
+}
+
+.title {
+    text-align: center;
+}
+
+.rule {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
+.button {
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
