@@ -1,6 +1,6 @@
 const choices = ['Rock', 'Paper', 'Scissors'];
 const tieMessage = ("It's a tie.");
-const winMessage = ('You WIn!!!');
+const winMessage = ('You Win!!!');
 const loseMessage = ('You Lose.');
 
 let playerWin = 0;
@@ -39,24 +39,35 @@ playerScore.textContent = (`Human Player score: ${playerWin}`);
 compScore.textContent = ('Computer Score: ' + compWin)
 divResult.textContent = ('')
 
-function rpsRound(humanHand, compHand) {
-    console.log('Human Player: ', humanHand);
-    console.log('Computer Player: ', compHand);
+function play(humanHand, compHand) {
     if (humanHand === compHand) {
-        rounds += 1
-        tie += 1
-        return (console.log(tieMessage));
-    } else if ((humanHand==='rock' && compHand==='scissors') || 
-                (humanHand==='paper' && compHand==='rock') || 
-                (humanHand==='scissors' && compHand==='paper')) {
-                    rounds += 1
-                    playerWin += 1
-                    return (console.log(winMessage));
+        divResult.textContent = tieMessage;
+    } else if ((humanHand==='Rock' && compHand==='Scissors') || 
+               (humanHand==='Paper' && compHand==='Rock') || 
+               (humanHand==='Scissors' && compHand==='Paper')) {
+                playerWin += 1;
+                playerScore.textContent = (`Human Player score: ${playerWin}`);
+                divResult.textContent = (`${humanHand} beats ${compHand}, ${winMessage}`);
                 }
-        else {
-            rounds += 1
-            compWin += 1
-            return (console.log(loseMessage))}
+      else {
+            compWin += 1;
+            compScore.textContent = (`Computer Score: ${compWin}`);
+            divResult.textContent = (`${compHand} beats ${humanHand}, ${loseMessage}`)
+        } 
     
+    if (playerWin >= 5) {
+        playerWin = 0;
+        compWin = 0;
+        divResult.textContent = ('')
+        playerScore.textContent = (`Human Player score: ${playerWin}`);
+        compScore.textContent = (`Computer Score: ${compWin}`);
+        alert('You Win!!');}
+    else if (compWin >= 5) {
+        playerWin = 0;
+        compWin = 0;
+        divResult.textContent = ('')
+        playerScore.textContent = (`Human Player score: ${playerWin}`);
+        compScore.textContent = (`Computer Score: ${compWin}`);
+        alert('You Lose');}
 }
 
