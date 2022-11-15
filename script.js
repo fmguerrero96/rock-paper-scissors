@@ -26,6 +26,18 @@ scissorsb.addEventListener('click', () => {
     play('Scissors', getCompChoice());
 })
 
+const container = document.querySelector('.container');
+const divResult = document.createElement('div');
+let playerScore = document.createElement('div');
+let compScore = document.createElement('div');
+
+container.appendChild(divResult);
+container.appendChild(playerScore);
+container.appendChild(compScore);
+
+playerScore.textContent = (`Human Player score: ${playerWin}`);
+compScore.textContent = ('Computer Score: ' + compWin)
+divResult.textContent = ('')
 
 function rpsRound(humanHand, compHand) {
     console.log('Human Player: ', humanHand);
