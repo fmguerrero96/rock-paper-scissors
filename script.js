@@ -11,6 +11,21 @@ function getCompChoice() {
     return selection
 }
 
+const rockb = document.querySelector('.rock');
+rockb.addEventListener('click', () => {
+    play('Rock', getCompChoice());
+})
+
+const paperb = document.querySelector('.paper');
+paperb.addEventListener('click', () => {
+    play('Paper', getCompChoice());
+})
+
+const scissorsb = document.querySelector('.scissors');
+scissorsb.addEventListener('click', () => {
+    play('Scissors', getCompChoice());
+})
+
 
 function rpsRound(humanHand, compHand) {
     console.log('Human Player: ', humanHand);
