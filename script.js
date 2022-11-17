@@ -31,11 +31,13 @@ const divResult = document.createElement('div');
 let playerScore = document.createElement('div');
 let compScore = document.createElement('div');
 
-divResult.setAttribute('style', 'fontWeight: bold; color: aliceblue')
-
 container.appendChild(divResult);
 container.appendChild(playerScore);
 container.appendChild(compScore);
+
+divResult.style.cssText= 'color: aliceblue; font-weight: bold; color:rgb(255, 208, 0)';
+playerScore.setAttribute('style', 'color: aliceblue; margin: 20px;');
+compScore.setAttribute('style', 'color: aliceblue;');
 
 playerScore.textContent = (`Human Player score: ${playerWin}`);
 compScore.textContent = ('Computer Score: ' + compWin)
