@@ -31,6 +31,8 @@ const divResult = document.createElement('div');
 let playerScore = document.createElement('div');
 let compScore = document.createElement('div');
 
+divResult.setAttribute('style', 'fontWeight: bold; color: aliceblue')
+
 container.appendChild(divResult);
 container.appendChild(playerScore);
 container.appendChild(compScore);

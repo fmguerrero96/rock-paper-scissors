@@ -4,11 +4,13 @@ body {
 
 .title {
     text-align: center;
+    color: rgb(255, 226, 37);
 }
 
 .rule {
     text-align: center;
     margin-top: 50px;
+    color: aliceblue;
 }
 
 .buttonContainer {
@@ -19,9 +21,13 @@ body {
 
 .button {
     margin: 20px;
+    height: 75px;
+    width: auto;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
