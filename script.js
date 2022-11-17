@@ -1,6 +1,6 @@
 const choices = ['Rock', 'Paper', 'Scissors'];
 const tieMessage = ("It's a tie.");
-const winMessage = ('You Win!!!');
+const winMessage = ('You Win!');
 const loseMessage = ('You Lose.');
 
 let playerWin = 0;
@@ -30,14 +30,18 @@ const container = document.querySelector('.container');
 const divResult = document.createElement('div');
 let playerScore = document.createElement('div');
 let compScore = document.createElement('div');
+const subContainer = document.createElement('div');
 
 container.appendChild(divResult);
-container.appendChild(playerScore);
-container.appendChild(compScore);
+container.appendChild(subContainer);
+subContainer.appendChild(playerScore);
+subContainer.appendChild(compScore);
 
-divResult.style.cssText= 'color: aliceblue; font-weight: bold; color:rgb(255, 208, 0)';
+divResult.style.cssText= 'color: aliceblue; font-weight: bold; color:rgb(255, 208, 0);';
 playerScore.setAttribute('style', 'color: aliceblue; margin: 20px;');
 compScore.setAttribute('style', 'color: aliceblue;');
+subContainer.style.cssText = 'display: flex; align-items: center;';
+
 
 playerScore.textContent = (`Human Player score: ${playerWin}`);
 compScore.textContent = ('Computer Score: ' + compWin)
