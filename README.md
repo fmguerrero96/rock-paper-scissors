@@ -1,3 +1,3 @@
-This is my initial rendition of the Rock, Paper, Scissors game from The Odin Project.
-As of now, there is no user interface. The game is solely played on the console.
-The game plays 5 rounds, determines the winner of each round and displays score at the end. 
+The previous rendition of this project could only be played in the console.
+This new version is played entirely on the browser. There is no need to type in 
+the player selection. The images are clickable and serve as the player input. 
